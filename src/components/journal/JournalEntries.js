@@ -10,6 +10,8 @@ export const JournalEntries = () => {
         <div className="journal__entries animate__animated animate__fadeIn animate__faster">
             
             {   
+                (notes !== {})
+                &&
                 notes.map( note => (
                     <JournalEntry key={ note.id } {...note} />
                 ))
